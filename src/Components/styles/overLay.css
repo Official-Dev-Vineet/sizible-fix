@@ -1,0 +1,63 @@
+.overLay {
+  background: hsla(310, 81%, 48%, 0.141);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  min-height: 100vh;
+  height: 100%;
+  z-index: 999;
+  font-family: "DM Sans", sans-serif;
+  overflow: auto;
+}
+.overLay .overLayWrapper {
+  margin: 4rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.overLay .overLayWrapper .imageWrapper {
+  display: grid;
+  place-items: center;
+  position: relative;
+  width: 452px;
+  height: 490px;
+}
+.overLay .overLayWrapper .imageWrapper img {
+  position: absolute;
+  inset: 0;
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+.overLay .overLayWrapper .imageWrapper .text {
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 700;
+  z-index: 1;
+  position: absolute;
+  color: #727272;
+  width: 150px;
+  text-align: center;
+}
+.overLay .statusText {
+  margin-top: -3rem;
+  font-size: 240px;
+  line-height: 315px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 768px) {
+  .overLay .overLayWrapper .imageWrapper {
+    width: 300px;
+    height: 300px;
+  }
+  .overLay .overLayWrapper .imageWrapper .text {
+    font-size: 18px;
+  }
+  .overLay .statusText {
+    font-size: 150px;
+  }
+}

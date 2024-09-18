@@ -1,0 +1,191 @@
+.sizer {
+  color: #050505;
+}
+.sizer h3 {
+  font-size: 24px;
+  text-align: center;
+}
+.sizer .sizerWrapper {
+  max-width: 900px;
+  width: 100%;
+  margin: auto;
+  position: relative;
+  display: grid;
+  place-items: center;
+  margin-top: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.sizer .sizerWrapper .bodyContainer {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 50px;
+  place-items: center;
+  gap: 1rem;
+  margin-left: 50px;
+}
+/*  body line styles */
+
+.sizer .sizerWrapper .bodyContainer .bodyImgWrapper {
+  position: relative;
+}
+
+.sizer .bodyImgWrapper .part {
+  height: 2px;
+  width: 100%;
+  border: 1px dashed #dd17bd;
+  position: absolute;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+.sizer .bodyImgWrapper .part::before,
+.sizer .bodyImgWrapper .part::after {
+  content: "";
+  width: 2px;
+  height: 10px;
+  background-color: #dd17bd;
+  position: absolute;
+  top: -5px;
+  left: -1px;
+}
+
+.sizer .bodyImgWrapper .part::after {
+  left: unset;
+  right: -1px;
+}
+.sizer .bodyImgWrapper .neck {
+  top: 3.8em;
+  width: 2.5em;
+  left: 1.8em;
+}
+.sizer .bodyImgWrapper .shoulder {
+  top: 4.5em;
+  width: 3.6em;
+  left: 1.4em;
+}
+
+.sizer .bodyImgWrapper .arms {
+  top: 7em;
+  left: -2.3em;
+  rotate: 96deg;
+}
+.sizer .bodyImgWrapper .leg {
+  bottom: 6em;
+  width: 140%;
+  left: -2.5em;
+  rotate: 93deg;
+}
+.sizer .bodyContainer .chest {
+  top: 5.5em;
+  width: 3em;
+  left: 1.7em;
+}
+.sizer .bodyContainer .waist {
+  top: 8em;
+  width: 3em;
+  left: 1.75em;
+}
+
+.sizer .bodyContainer .hips {
+  top: 10.8em;
+  width: 3.8em;
+  left: 1.2em;
+}
+.sizer .bodyImgWrapper .shoes {
+  bottom: 1em;
+  rotate: 30deg;
+  width: 1.2em;
+  right: 1em;
+}
+.sizer .sizerWrapper .bodyContainer .heightSlider {
+  height: 100%;
+  width: 2px;
+  border-right: 3px dashed #dd17bd;
+  position: relative;
+}
+.sizer .sizerWrapper .bodyContainer .heightSlider::before,
+.sizer .sizerWrapper .bodyContainer .heightSlider::after {
+  content: "";
+  width: 12px;
+  height: 4px;
+  position: absolute;
+  top: -5px;
+  left: calc(50% - 3.5px);
+  background-color: #dd17bd;
+  border-radius: 5px;
+}
+.sizer .sizerWrapper .bodyContainer .heightSlider::after {
+  top: unset;
+  bottom: -4px;
+}
+.sizer .sizerWrapper .bodyContainer .heightSlider .dot {
+  position: absolute;
+  bottom: 3px;
+  left: calc(50% - 4.5px);
+  width: 13px;
+  height: 13px;
+  background-color: #dd17bd;
+  border-radius: 50%;
+  z-index: 1;
+  cursor: pointer;
+}
+.sizer .sizerWrapper .bodyContainer .btn {
+  padding: 0.5rem 2rem;
+  background: #00000040;
+  border-radius: 5px;
+  color: #fff;
+  width: max-content;
+  margin: auto;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+.sizer .sizerWrapper .bodyContainer .btn:hover {
+  background: #dd17bd;
+}
+.sizer .sizeUnits {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: -5rem;
+}
+
+.sizer .sizeUnits .sizerItem {
+  padding: 0.3rem;
+  background-color: #f7f7f7;
+  border-radius: 5px;
+  font-size: 12px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.sizer .sizerItem:last-child {
+  margin-top: 4rem;
+}
+
+.sizer .sizeUnits .sizerItem:hover {
+  background-color: hsla(309, 75%, 85%, 0.734);
+}
+.sizer .sizeUnits .sizerItem:hover h4 {
+  color: #dd17bd;
+}
+.sizer .sizerItem .sizerOptions {
+  font-family: inherit;
+  width: 100%;
+  outline: none;
+  font-size: 12px;
+}
+.sizer .sizerItem .sizerOption {
+  outline: none;
+  padding: 0.5rem;
+}
+.sizer .sizerItem .sizerOption:hover {
+  accent-color: red;
+}
+.sizer .sizerWrapper .bodyContainer {
+  grid-template-columns: 1fr 5px;
+  gap: 0.5rem;
+  margin-left: 1rem;
+}
+.sizer .bodyContainer img {
+  width: 100px;
+}

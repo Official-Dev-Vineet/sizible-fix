@@ -1,0 +1,135 @@
+.tabber {
+  position: absolute;
+  top: 0;
+  left: 57px;
+  width: calc(100% - 57px);
+  height: 100%;
+  z-index: 1;
+  background-color: hsla(310, 81%, 48%, 0.439);
+}
+.tabber .tabberBtns {
+  margin-top: 2rem;
+  width: max-content;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  margin-left: auto;
+  margin-bottom: -0.35rem;
+  border-radius: 5px;
+}
+
+.tabber .tabberBtns .btn {
+  background: #f4e3f1;
+  padding: 0.2rem 1rem;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid hsla(0, 0%, 0%, 0.2);
+  transition: all 0.3s ease;
+}
+.tabber .tabberBtns .btn:not(:first-child) {
+  color: #3c4242;
+  font-size: 18px;
+  display: inline-block;
+  padding: 0.425rem 1rem;
+  line-height: 22px;
+  width: 150px;
+  transform-origin: bottom;
+}
+.tabber .tabberBtns .btn.active {
+  transform: translateY(-5px);
+  border-bottom: none;
+  border-radius: 5px 5px 0 0;
+  background-color: #fff;
+  height: 45px;
+}
+
+.tabber .tabContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background-color: #fff;
+  height: calc(100% - 2rem);
+}
+.tabber .tabContainer .leftContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+}
+.tabber .tabContainer .leftContainer span {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: -0.05em;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #3c4242;
+}
+.tabber .tabContainer .leftContainer .avatarWrapper {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.tabber .tabContainer .leftContainer .avatarWrapper .border:last-child {
+  border-radius: 50%;
+  width: 50px;
+  border: 1px solid hsla(0, 0%, 0%, 0.2);
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 15px;
+  letter-spacing: -0.05em;
+  text-align: center;
+  color: #6c6c6c;
+  background: #f6f6f6;
+}
+
+.tabber .tabContainer .rightContainer {
+  padding: 0.5rem;
+  grid-column: span 3;
+  height: 100%;
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .tabber {
+    left: 2.25rem;
+    width: 100vw;
+  }
+  .tabber .tabContainer {
+    grid-template-columns: 1fr;
+  }
+  .tabber .tabberBtns .btn {
+    font-size: 14px !important;
+  }
+  .tabber .tabContainer .leftContainer {
+    flex-direction: row;
+    margin: 1rem;
+    gap: 1rem;
+  }
+  .tabber .tabContainer .leftContainer .avatarWrapper .border:last-child {
+    width: 30px;
+    height: 30px;
+    font-size: 9px;
+  }
+  .tabber .tabContainer .leftContainer .avatarWrapper img {
+    width: 30px;
+    height: 30px;
+  }
+  .tabber .tabContainer .leftContainer span {
+    margin-bottom: 0;
+  }
+  .tabber .tabContainer .leftContainer .avatarWrapper {
+    flex-direction: row;
+  }
+  .tabber .tabberBtns .btn:not(:first-child) {
+    width: max-content;
+  }
+}
